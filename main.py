@@ -45,6 +45,26 @@ while True:
                 dir1.off()
                 dir2.on()
                 set_pwm(speed)
+            elif data_str == 'G':
+                dir1.on()
+                dir2.off()
+                set_pwm(speed)
+                st2 = 1
+            elif data_str == 'H':
+                dir1.on()
+                dir2.off()
+                set_pwm(speed)
+                st1 = 1
+            elif data_str == 'I':
+                dir1.off()
+                dir2.on()
+                set_pwm(speed)
+                st2 = 1
+            elif data_str == 'J':
+                dir1.off()
+                dir2.on()
+                set_pwm(speed)
+                st1 = 1
             elif data_str == 'L':
                 st2 = 1
             elif data_str == 'R':
