@@ -3,7 +3,7 @@ from machine import UART, Pin, PWM
 from time import ticks_ms, ticks_diff, sleep_ms
 
 # Khởi tạo UART0 trên GP0 (TX) và GP1 (RX) với tốc độ baud 9600
-uart = UART(0, baudrate=9600, tx=Pin(12), rx=Pin(13))
+uart = UART(0, baudrate=115200, tx=Pin(12), rx=Pin(13))
 # Khởi tạo PWM trên chân GPIO
 servo = PWM(Pin(6))
 motor = PWM(Pin(10))
