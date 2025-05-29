@@ -1,3 +1,4 @@
+# https://github.com/ledai25/Pico_RC
 from machine import UART, Pin, PWM
 from time import ticks_ms, ticks_diff, sleep_ms
 
@@ -77,6 +78,10 @@ while True:
                 speed = 80
             elif data_str == '9':
                 speed = 100
+            elif data_str == 'l':
+                st2 = 0
+            elif data_str == 'r':
+                st1 = 0
             else:
                 st1 = 0
                 st2 = 0
@@ -84,10 +89,10 @@ while True:
                 dir2.off()
         except:
             print("Lỗi khi xử lý dữ liệu:", data)           
-    if st1 == 1 and ticks_diff(current_time, last_time) >= 30:
+    if st1 == 1 and ticks_diff(current_time, last_time) >= 20:
         count += 1
         last_time = current_time
-    if st2 == 1 and ticks_diff(current_time, last_time) >= 30:
+    if st2 == 1 and ticks_diff(current_time, last_time) >= 20:
         count -= 1
         last_time = current_time  
     count = max(60, min(count, 120)) 
