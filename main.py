@@ -70,7 +70,7 @@ while True:
                 st2 = 1
             elif data_str == 'R':
                 st1 = 1
-            elif data_str == '1':
+            elif data_str == '0':
                 speed = 0
             elif data_str == '4':
                 speed = 65
